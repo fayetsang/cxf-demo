@@ -18,7 +18,7 @@ client端实现在cxf-client
     <!-- Could not initialize class org.apache.cxf.attachment.AttachmentUtil -->
     一开始使用的cxf版本是3.2.6，升级cxf的版本到3.3.x，同时也解决了上面的问题。
 
-(2).访问wsdl的路径： http://localhost:8080/cxf-server-JAXWS-spring/ws/us?wsdl((
+(2).访问wsdl的路径： http://localhost:8080/cxf-server-JAXWS-spring/ws/us?wsdl
 (3).Available SOAP services： http://localhost:8080/cxf-server-JAXWS-spring/ws
 client端实现在cxf-client
 

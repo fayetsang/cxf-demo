@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+       xsi:schemaLocation="
+		        http://www.springframework.org/schema/beans
+		        http://www.springframework.org/schema/beans/spring-beans.xsd
+		        http://cxf.apache.org/jaxrs
+		        http://cxf.apache.org/schemas/jaxrs.xsd
+		        ">
+    <!--配置方式一:使用jaxrs:serverr配置-->
+    <jaxrs:server address="/user">
+        <jaxrs:serviceBeans>
+            <bean id="userService" class="jaxrs.service.UserServiceImpl"></bean>
+        </jaxrs:serviceBeans>
+    </jaxrs:server>
+
+
+    <!--配置方式二:使用spring beans方式配置-->
+<!--    <import resource="classpath:META-INF/cxf/cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+
+    <bean class="org.apache.cxf.jaxrs.JAXRSServerFactoryBean" init-method="create">
+        <property name="address" value="/user"/>
+        <property name="serviceBeans">
+            <bean id="userService" class="UserServiceImpl"></bean>
+        </property>
+    </bean>-->
+</beans>

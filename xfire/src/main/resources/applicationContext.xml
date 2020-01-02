@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+        "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+    <bean name="userServiceImpl" class="xfire.service.UserServiceImpl"/>
+
+    <import resource="classpath:org/codehaus/xfire/spring/xfire.xml" />
+    <bean id="baseWebService" class="org.codehaus.xfire.spring.remoting.XFireExporter"
+          lazy-init="false" abstract="true">
+        <property name="serviceFactory" ref="xfire.serviceFactory" />
+        <property name="xfire" ref="xfire" />
+    </bean>
+
+    <bean id="userService" parent="baseWebService">
+        <property name="serviceBean" ref="userServiceImpl" />
+        <property name="serviceClass" value="xfire.service.UserService" />
+    </bean>
+
+</beans>

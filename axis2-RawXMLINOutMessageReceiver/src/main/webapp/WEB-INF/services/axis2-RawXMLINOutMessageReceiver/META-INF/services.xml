@@ -1,0 +1,10 @@
+<service name="SpringAwareService">
+    <description>
+        simple spring example
+    </description>
+    <parameter name="ServiceObjectSupplier">org.apache.axis2.extensions.spring.receivers.SpringAppContextAwareObjectSupplier</parameter>
+    <parameter name="SpringBeanName">springAwareService</parameter>
+    <operation name="getValue">
+        <messageReceiver class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver"/>
+    </operation>
+</service>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- Axis2 Web Service, but to Spring, its just another bean that has dependencies -->
+    <bean id="userService" class="axis2.service.UserServiceImpl" />
+
+    <!--axis2 交给 spring 管理-->
+    <bean id="applicationContext" class="org.apache.axis2.extensions.spring.receivers.ApplicationContextHolder"/>
+        </beans>

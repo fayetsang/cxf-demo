@@ -10,7 +10,7 @@
     <packaging>war</packaging>
 
     <properties>
-        <axis2.version>1.6.2</axis2.version>
+        <axis2.version>1.6.3</axis2.version>
         <spring.version>5.2.1.RELEASE</spring.version>
     </properties>
 
